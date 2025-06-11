@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Sumeya Farah</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f1117;
+      color: #f5f5f5;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #1a1c23;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .nav-logo {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fdd835;
+    }
+
+    .nav-links a {
+      color: #64b5f6;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffffff;
+      border-bottom: 2px solid #fdd835;
+    }
+
+    .main-content {
+      display: flex;
+      padding: 30px 40px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+  width: 260px;
+  background-color: #1a1c23;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.03);
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  color: #fdd835;
+  margin-top: 10px;
+}
+
+.sidebar-role {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fdd835;
+  box-shadow: 0 0 15px rgba(253, 216, 53, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+    .content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .project-card {
+      background-color: #1a1c23;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    .project-card h3 {
+      color: #fdd835;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .project-card p strong {
+      color: #64b5f6;
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-logo">Sumeya A. Farah</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">Resume</a>
+      <a href="work.html" class="active">Projects</a>
+      <a href="blog.html">Lab Challenges</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <!-- Sidebar -->
+    <aside class="sidebar animated-slide">
+  <img src="sumeya-farah.jpg" alt="Sumeya Farah" class="profile-pic pulse" />
+  <h2 class="sidebar-title">Sumeya A. Farah</h2>
+  <p class="sidebar-role">Software Engineer<br>Cybersecurity Enthusiast</p>
+</aside>
+
+
+    <!-- Project Cards -->
+    <section class="content">
+
+      <div class="project-card">
+        <h3>Flick Feeds App</h3>
+        <p><strong>Goal:</strong> Build a Netflix-style movie app with a modern UI and real movie data.</p>
+        <p><strong>Tools Used:</strong> React, OMDB API, Tailwind CSS</p>
+        <p><strong>Features:</strong> Genre filter, trending/latest/recommended sections, club system, login/register, comments, likes, and dark/light theme switch.</p>
+        <img src="Flickfeeds.png" alt="Flick Feeds App Screenshot">
+      </div>
+
+      <div class="project-card">
+        <h3>Pizza Ordering System</h3>
+        <p><strong>Goal:</strong> Create a dynamic pizza order and checkout experience.</p>
+        <p><strong>Tools Used:</strong> React, CSS, LocalStorage</p>
+        <p><strong>Features:</strong> Custom toppings, quantity updates, total price calculator, and interactive UI with order summary.</p>
+        <img src="pizza.png" alt="Pizza App Screenshot">
+      </div>
+
+      <div class="project-card">
+        <h3>EncryptoFile App</h3>
+        <p><strong>Goal:</strong> Design a secure encryption & decryption tool for file protection.</p>
+        <p><strong>Tools Used:</strong> JavaScript, HTML/CSS, CryptoJS, LocalStorage</p>
+        <p><strong>Features:</strong> AES encryption, user login/register, settings page, download activity, and admin dashboard with analytics.</p>
+        <img src="encrypto.png" alt="Encryption App Screenshot">
+      </div>
+
+    </section>
+  </div>
+</body>
+</html>

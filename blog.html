@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab Challenges | Sumeya Farah</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f1117;
+      color: #f5f5f5;
+      min-height: 100vh;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #1a1c23;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
+    }
+
+    .nav-logo {
+      font-size: 20px;
+      font-weight: 600;
+      color: #fdd835;
+    }
+
+    .nav-links a {
+      color: #64b5f6;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffffff;
+      border-bottom: 2px solid #fdd835;
+    }
+
+    .main-content {
+      display: flex;
+      padding: 30px 40px;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+  width: 260px;
+  background-color: #1a1c23;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.03);
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  color: #fdd835;
+  margin-top: 10px;
+}
+
+.sidebar-role {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fdd835;
+  box-shadow: 0 0 15px rgba(253, 216, 53, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+    .content {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+    }
+
+    .lab-card p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.lab-card p strong {
+  color: #64b5f6;
+}
+
+
+    .lab-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    .lab-card h3 {
+      color: #fdd835;
+      margin-bottom: 10px;
+    }
+
+    .lab-card p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .lab-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-logo">Sumeya A. Farah</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">Resume</a>
+      <a href="work.html">Projects</a>
+      <a href="blog.html" class="active">Lab Challenges</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="main-content">
+    <!-- Sidebar -->
+    <aside class="sidebar animated-slide">
+  <img src="sumeya-farah.jpg" alt="Sumeya Farah" class="profile-pic pulse" />
+  <h2 class="sidebar-title">Sumeya A. Farah</h2>
+  <p class="sidebar-role">Software Engineer<br>Cybersecurity Enthusiast</p>
+</aside>
+
+
+    <!-- Lab Cards -->
+    <section class="content">
+
+      <div class="lab-card">
+        <h3>Lab 1: Investigate TCP/IP and OSI Models</h3>
+        <p><strong>Problem:</strong> Understand how network protocols function across OSI layers.</p>
+        <p><strong>Approach:</strong> Used Packet Tracer to simulate layered communication.</p>
+        <p><strong>Tools Used:</strong> Cisco Packet Tracer</p>
+        <img src="TCP-IP.png" alt="Lab 1 Screenshot">
+        <p><strong>Lessons:</strong> Gained foundational insight into layered protocol design.</p>
+
+      </div>
+
+      <div class="lab-card">
+        <h3>Lab 2: Use Wireshark to View Network Traffic</h3>
+        <p><strong>Problem:</strong> Capture and interpret ICMP traffic in real-time.</p>
+        <p><strong>Approach:</strong> Sent ping packets to local and remote hosts and analyzed them.</p>
+        <p><strong>Tools Used:</strong> Wireshark</p>
+        <img src="wireshackNetworkTraffic.png" alt="Lab 2 Screenshot">
+        <p><strong>Lessons:</strong> Learned traffic analysis basics and header structure.</p>
+
+      </div>
+
+      <div class="lab-card">
+        <h3>Lab 3: Intro to Network Traffic Analysis</h3>
+        <p><strong>Problem:</strong> Analyze a PCAP file to find anomalies or indicators of compromise.</p>
+        <p><strong>Approach:</strong> Used tcpdump and Wireshark to filter and examine packets.</p>
+        <p><strong>Tools Used:</strong> Wireshark, tcpdump</p>
+        <img src="Network-Traffic.png" alt="Lab 3 Screenshot">
+        <p><strong>Lessons:</strong> Mastered traffic filtering, protocol dissection.</p>
+
+      </div>
+
+      <div class="lab-card">
+        <h3>Lab 4: DNS in Detail</h3>
+        <p><strong>Problem:</strong> Understand DNS resolution and record types.</p>
+        <p><strong>Approach:</strong> Queried DNS servers using nslookup to explore A, MX, TXT records.</p>
+        <p><strong>Tools Used:</strong> nslookup, dig</p>
+        <img src="DNS.png" alt="Lab 4 Screenshot">
+        <p><strong>Lessons:</strong> Understood DNS record functions and propagation behavior.</p>
+
+      </div>
+
+      <div class="lab-card">
+        <h3>Lab 5: Web Requests</h3>
+        <p><strong>Problem:</strong> Identify how HTTP/HTTPS requests are made and tracked.</p>
+        <p><strong>Approach:</strong> Used curl and browser dev tools to inspect headers and responses.</p>
+        <p><strong>Tools Used:</strong> curl, Chrome DevTools</p>
+        <img src="webrequests.png" alt="Lab 5 Screenshot">
+        <p><strong>Lessons:</strong> Learned structure of HTTP requests and status codes.</p>
+
+      </div>
+
+      <div class="lab-card">
+        <h3>Lab 6: Build a Switch and Router Network</h3>
+        <p><strong>Problem:</strong> Design a secure network connecting multiple switches and a router.</p>
+        <p><strong>Approach:</strong> Configured IP addressing, VLANs, static routing, and trunking.</p>
+        <p><strong>Tools Used:</strong> Cisco Packet Tracer, CLI commands</p>
+        <img src="Switch and Router.png" alt="Lab 6 Screenshot">
+        <p><strong>Lessons:</strong> Understood VLANs, router-on-a-stick, and inter-switch routing.</p>
+
+      </div>
+
+    </section>
+  </div>
+</body>
+</html>

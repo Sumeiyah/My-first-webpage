@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sumeya A. Farah | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navbar -->
+  <div class="navbar">
+    <div class="nav-logo">Sumeya A. Farah</div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">Resume</a>
+      <a href="work.html">Projects</a>
+      <a href="blog.html">Lab Challenges</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- Page Layout -->
+  <div class="main-content">
+    <!-- Sidebar -->
+    <aside class="sidebar animated-slide">
+  <img src="sumeya-farah.jpg" alt="Sumeya Farah" class="profile-pic pulse" />
+  <h2 class="sidebar-title">Sumeya A. Farah</h2>
+  <p class="sidebar-role">Software Engineer<br>Cybersecurity Enthusiast</p>
+</aside>
+
+
+    <!-- Hero Section -->
+    <section class="hero hero-left">
+      <h1 class="slide-in">Hi, I'm <span class="highlight">Sumeya Farah</span></h1>
+      <h2 class="slide-in delay-1">Software Engineer & Cybersecurity Enthusiast</h2>
+      <p class="fade-in delay-2">
+        I specialize in secure, scalable, and user-friendly web applications. Passionate about solving tech problems and blending security with design, I love turning ideas into real solutions.
+      </p>
+      <div class="cta-buttons fade-in delay-3">
+        <a href="work.html" class="btn-primary">View My Work</a>
+        <a href="contact.html" class="btn-outline">Let’s Connect</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- JavaScript for Animation -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in, .slide-in').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
